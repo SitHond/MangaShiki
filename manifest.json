@@ -1,0 +1,24 @@
+{
+    "manifest_version": 3,
+    "name": "Shikimori Manga Reader",
+    "version": "1.0",
+    "description": "",
+    "permissions": ["activeTab", "scripting"],
+    "host_permissions": [
+      "https://shikimori.one/*",
+      "https://shikimori.me/*"
+    ],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "content_scripts": [
+      {
+        "matches": ["https://shikimori.one/*", "https://shikimori.me/*"],
+        "js": ["content.js"]
+      }
+    ],
+    "action": {
+      "default_popup": "index.html"
+    }
+  }
+  
