@@ -49,7 +49,7 @@ async function fetchMangaPage(mangaId, page) {
 
     if (response.ok) {
       // Обновляем изображение на странице
-      mangaImageElement.src = data.url;
+      mangaImageElement.src = data.url; // Убедитесь, что это правильный путь к изображению
       enableButtons();  // Включаем кнопки после успешной загрузки страницы
     } else {
       console.error('Ошибка загрузки страницы:', data.message);
